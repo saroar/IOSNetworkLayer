@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   Services.plist
+   NetworkingLayer
+
+   Created by Alif on 06/05/2018.
+   Copyright (c) 2018 Alif. All rights reserved.
+-->
+<plist version="1.0">
+    <dict>
+        <key>Facebook</key>
+        <dict>
+            <key>consumerKey</key>
+            <string>1813476918931488</string>
+            <key>consumerSecret</key>
+            <string>b7c17ef363af9de2d97ac984f61ca449</string>
+        </dict>
+        <key>Vk</key>
+        <dict>
+            <key>consumerKey</key>
+            <string>5636757</string>
+            <key>consumerSecret</key>
+            <string>ss7O6Aw2jIDK4nZw5YFx</string>
+        </dict>
+    </dict>
+</plist>
