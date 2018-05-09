@@ -1,5 +1,5 @@
 //
-//  HangoutChannels.swift
+//  Hevent.swift
 //  NetworkingLayer
 //
 //  Created by Alif on 26/04/2018.
@@ -12,10 +12,10 @@ struct MemberPictureUrls: Codable {
     private(set) var memberPictureUrls: [String]?
 }
 
-struct HangoutChannels: Codable {
+struct Hevent: Codable {
+    private(set) var id: String
     private(set) var name: String
     private(set) var memberPictureUrls: MemberPictureUrls?
-    private(set) var id: String
     private(set) var share: Bool
     private(set) var created: Int
     private(set) var ownerID: String
@@ -25,11 +25,11 @@ struct HangoutChannels: Codable {
     typealias JSON = [String: Any]
 }
 
-extension HangoutChannels {
+extension Hevent {
     enum CodingKeys: String, CodingKey {
+        case id = "id"
         case name = "name"
         case memberPictureUrls = "member_picture_urls"
-        case id = "id"
         case share = "share"
         case created = "created"
         case ownerID = "owner_id"

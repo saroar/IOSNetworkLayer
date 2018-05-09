@@ -42,20 +42,18 @@ class LoginViewController: UIViewController {
 
 
     @IBAction func loginButtonTapped(_ sender: Any) {
-        Auth.login(username: userNameTextField.text ?? "", password: userPasswordTextField.text ?? "", { msg in
-            if msg == "Login Success" {
-                
+        APIClient.login(username: userNameTextField.text ?? "", password: userPasswordTextField.text ?? "", completion: { msg in
+
+            if msg.isSuccess {
                 Auth.accountType = "local"
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: "welcome", sender: self)
                 }
                 print("Login Success From perfect login")
-                
-            } else if msg == "Login Failure" {
-                self.labelMessage.text = "Please provide a valid username and password"
             } else {
-                self.labelMessage.text = msg
+                self.labelMessage.text = "Please provide a valid username and password"
             }
         })
+
     }
 }

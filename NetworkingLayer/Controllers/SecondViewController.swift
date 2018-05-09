@@ -16,9 +16,40 @@ class SecondViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    func createHevent() {
+
+//        APIClient.creatHevent(
+//            ownerId: Auth.userid,
+//            name: Auth.name,
+//            memberPictureUrls: nil,
+//            active: true,
+//            share: true,
+//            duration: 240,
+//            created: convertTimeDateToInt()
+//        ) { res in
+//
+//            if res.isSuccess {
+//                 print("created Hevent", res)
+//            } else {
+//                print("error create Hevent", res.error?.localizedDescription as Any)
+//            }
+//
+//        }
+        APIClient.create(params: <#T##[String : Any]#>, uri: <#T##String#>) { json in
+            print(json)
+        }
     }
 
+    func convertTimeDateToInt() -> Int {
+        let now = Date()
+        return Int(now.timeIntervalSinceReferenceDate)
+    }
 
+    
+    @IBAction func createEventTapped(_ sender: Any) {
+        createHevent()
+    }
 }
 

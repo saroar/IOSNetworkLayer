@@ -13,6 +13,15 @@ enum APIRouter: URLRequestConvertible {
     case login(username:String, password:String)
     case events
     case event(id: Int)
+    case createHevent(
+        ownerId: String,
+        name: String,
+        memberPictureUrls: MemberPictureUrls?,
+        active: Bool,
+        share: Bool,
+        duration: Int,
+        created: Int
+    )
     
     // MARK: - HTTPMethod
     private var method: HTTPMethod {
@@ -21,6 +30,8 @@ enum APIRouter: URLRequestConvertible {
             return .post
         case .events, .event:
             return .get
+        case .createHevent:
+            return .post
         }
     }
     
@@ -33,6 +44,8 @@ enum APIRouter: URLRequestConvertible {
             return "/active_hangout_channels"
         case .event(let id):
             return "/event/\(id)"
+        case .createHevent:
+            return "/hangout_channel"
         }
     }
     
@@ -43,6 +56,26 @@ enum APIRouter: URLRequestConvertible {
             return [K.APIParameterKey.username: username, K.APIParameterKey.password: password]
         case .events, .event:
             return nil
+        case .createHevent(
+                           let ownerId,
+                           let name,
+                           let memberPictureUrls,
+                           let duration,
+                           let share,
+                           let active,
+                           let created
+                           ):
+            
+            return [
+                K.HeventAPIParameterKey.ownerID: ownerId,
+                K.HeventAPIParameterKey.name: name,
+                K.HeventAPIParameterKey.memberPictureUrls: memberPictureUrls ?? String.empty,
+                K.HeventAPIParameterKey.duration: duration,
+                K.HeventAPIParameterKey.share: share,
+                K.HeventAPIParameterKey.active: active,
+                K.HeventAPIParameterKey.created: created
+            ]
+            
         }
     }
     

@@ -14,7 +14,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad(); printTypeOf(self)
         
-        APIClient.getHangoutChannelss { result in
+        APIClient.getHevents { result in
             switch result {
             case .success(let events):
                 print("_____________________________")

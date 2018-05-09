@@ -131,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2w-94-51W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1161" y="726"/>
+            <point key="canvasLocation" x="-1234" y="589"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -154,6 +154,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVt-eL-RPj">
+                                <rect key="frame" x="86" y="135" width="149" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <state key="normal" title="CreateHevent"/>
+                                <connections>
+                                    <action selector="createEventTapped:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Ler-Q7-w2z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -198,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adp-h1-C02" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1159" y="-45"/>
+            <point key="canvasLocation" x="-1213" y="-241"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -245,6 +254,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4if-Xy-JfD"/>
-        <segue reference="U8F-L4-a0h"/>
+        <segue reference="AQG-UQ-TF0"/>
     </inferredMetricsTieBreakers>
 </document>

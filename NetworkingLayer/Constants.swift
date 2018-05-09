@@ -17,6 +17,17 @@ struct K {
         static let password = "password"
         static let username = "username"
     }
+    
+    struct HeventAPIParameterKey {
+        static let id                = "id"
+        static let ownerID           = "ownerID"
+        static let name              = "name"
+        static let memberPictureUrls = "memberPictureUrls"
+        static let duration          = "duration"
+        static let share             = "share"
+        static let active            = "active"
+        static let created           = "created"
+    }
 }
 
 enum HTTPHeaderField: String {

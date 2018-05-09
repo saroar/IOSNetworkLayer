@@ -190,31 +190,7 @@ struct Auth {
         UserDefaults.standard.set(csrf, forKey: "csrf")
     }
     
-    public static func login(username: String, password: String, _ callback: @escaping (String) -> Void) {
-        let parameters: Parameters = [
-            "username": username,
-            "password": password
-        ]
-        
-        Alamofire.request("\(Auth.host)/api/v1/login", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: Auth.setHeaders()).responseJSON { response in
-            if response.response?.statusCode != 400 {
-                if let jsonValue = response.result.value {
-                    
-                    let json = jsonValue as? [String: Any] ?? [String: Any]()
-                    
-                    let msg = json["error"] as? String ?? String.empty
-                    Auth.userid     = json["userid"]   as? String ?? String.empty
-                    Auth.username     = json["username"] as? String ?? "."
-                    Auth.email         = json["email"]    as? String ?? String.empty
-                    Auth.usertype     = json["usertype"] as? String ?? String.empty
-                    
-                    callback(msg)
-                }
-            } else {
-                callback("Please provide a valid username and password")
-            }
-        }
-    }
+
     
     public static func register(username: String, email: String, _ callback: @escaping (String) -> Void) {
         let parameters: Parameters = [
