@@ -10,7 +10,7 @@ import Foundation
 
 struct K {
     struct ProductionServer {
-        static let baseURL = "http://localhost:8181/api/v1"
+        static let baseURL = "http://localhost:8181/api/v1/"
     }
     
     struct APIParameterKey {
@@ -22,11 +22,18 @@ struct K {
         static let id                = "id"
         static let ownerID           = "ownerID"
         static let name              = "name"
-        static let memberPictureUrls = "memberPictureUrls"
         static let duration          = "duration"
         static let share             = "share"
         static let active            = "active"
         static let created           = "created"
+        static let memberPicture     = "memberPicture"
+    }
+    
+    struct PersonAPIParameterKey {
+        static let id = "id"
+        static let firstName = "firstName"
+        static let lastName = "lastName"
+        static let phoneNumbers = "phoneNumbers"
     }
 }
 

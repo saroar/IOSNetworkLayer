@@ -17,17 +17,21 @@
 		C36177BA209222E100545C35 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36177B9209222E100545C35 /* TabBarVC.swift */; };
 		C36177BC2092237E00545C35 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36177BB2092237E00545C35 /* SetupViewController.swift */; };
 		C36177BE2092239A00545C35 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36177BD2092239A00545C35 /* LoginViewController.swift */; };
-		C36177C320922D6F00545C35 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36177C220922D6F00545C35 /* APIClient.swift */; };
 		C36177C520922E2E00545C35 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36177C420922E2E00545C35 /* APIRouter.swift */; };
 		C36177C72092303C00545C35 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36177C62092303C00545C35 /* Constants.swift */; };
 		C36177C920923F2B00545C35 /* Hevent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36177C820923F2B00545C35 /* Hevent.swift */; };
 		C36177CB20923F3D00545C35 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36177CA20923F3D00545C35 /* User.swift */; };
 		C36177CD20923F5900545C35 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36177CC20923F5900545C35 /* DateFormatter.swift */; };
 		C36177CF20923F7600545C35 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36177CE20923F7600545C35 /* Category.swift */; };
+		C37D83D120AC538800F70B52 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D83D020AC538800F70B52 /* Helpers.swift */; };
+		C37D83D320AC5E6A00F70B52 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D83D220AC5E6A00F70B52 /* Person.swift */; };
+		C37D83D520AC5E8500F70B52 /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D83D420AC5E8500F70B52 /* PhoneNumber.swift */; };
+		C39613F020A6CA45003B9EC5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36177C220922D6F00545C35 /* APIClient.swift */; };
 		C3BBABC5209F7AE2004DBB19 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBABC4209F7AE2004DBB19 /* Auth.swift */; };
 		C3BBABC9209F7B58004DBB19 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBABC8209F7B58004DBB19 /* String.swift */; };
 		C3BBABCB209F848B004DBB19 /* Services.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3BBABCA209F848B004DBB19 /* Services.plist */; };
 		C3BBABCD20A0457D004DBB19 /* ReadServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBABCC20A0457D004DBB19 /* ReadServices.swift */; };
+		C3F2EECD20A729F5006A99B6 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F2EECC20A729F5006A99B6 /* Login.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,10 +55,14 @@
 		C36177CA20923F3D00545C35 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C36177CC20923F5900545C35 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		C36177CE20923F7600545C35 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		C37D83D020AC538800F70B52 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		C37D83D220AC5E6A00F70B52 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		C37D83D420AC5E8500F70B52 /* PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
 		C3BBABC4209F7AE2004DBB19 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		C3BBABC8209F7B58004DBB19 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		C3BBABCA209F848B004DBB19 /* Services.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Services.plist; sourceTree = "<group>"; };
 		C3BBABCC20A0457D004DBB19 /* ReadServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadServices.swift; sourceTree = "<group>"; };
+		C3F2EECC20A729F5006A99B6 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		EF36FD709B4CE2561AA57159 /* Pods_NetworkingLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkingLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -102,6 +110,7 @@
 			children = (
 				C3BBABC6209F7B26004DBB19 /* Extentions */,
 				C36177A52092215100545C35 /* AppDelegate.swift */,
+				C37D83D020AC538800F70B52 /* Helpers.swift */,
 				C3BBABCA209F848B004DBB19 /* Services.plist */,
 				C36177C120922CCE00545C35 /* APIClient */,
 				C36177C020922CBB00545C35 /* Models */,
@@ -132,10 +141,13 @@
 			isa = PBXGroup;
 			children = (
 				C36177CA20923F3D00545C35 /* User.swift */,
+				C3F2EECC20A729F5006A99B6 /* Login.swift */,
 				C36177C820923F2B00545C35 /* Hevent.swift */,
 				C36177CE20923F7600545C35 /* Category.swift */,
 				C36177CC20923F5900545C35 /* DateFormatter.swift */,
 				C3BBABC4209F7AE2004DBB19 /* Auth.swift */,
+				C37D83D220AC5E6A00F70B52 /* Person.swift */,
+				C37D83D420AC5E8500F70B52 /* PhoneNumber.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -270,14 +282,12 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-NetworkingLayer/Pods-NetworkingLayer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/OAuthSwift/OAuthSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OAuthSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,9 +303,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C36177CD20923F5900545C35 /* DateFormatter.swift in Sources */,
+				C3F2EECD20A729F5006A99B6 /* Login.swift in Sources */,
 				C36177BE2092239A00545C35 /* LoginViewController.swift in Sources */,
-				C36177C320922D6F00545C35 /* APIClient.swift in Sources */,
+				C37D83D520AC5E8500F70B52 /* PhoneNumber.swift in Sources */,
 				C36177AA2092215100545C35 /* SecondViewController.swift in Sources */,
+				C39613F020A6CA45003B9EC5 /* APIClient.swift in Sources */,
 				C36177A62092215100545C35 /* AppDelegate.swift in Sources */,
 				C36177C920923F2B00545C35 /* Hevent.swift in Sources */,
 				C36177BA209222E100545C35 /* TabBarVC.swift in Sources */,
@@ -304,6 +316,8 @@
 				C36177CF20923F7600545C35 /* Category.swift in Sources */,
 				C36177BC2092237E00545C35 /* SetupViewController.swift in Sources */,
 				C3BBABC5209F7AE2004DBB19 /* Auth.swift in Sources */,
+				C37D83D120AC538800F70B52 /* Helpers.swift in Sources */,
+				C37D83D320AC5E6A00F70B52 /* Person.swift in Sources */,
 				C3BBABC9209F7B58004DBB19 /* String.swift in Sources */,
 				C3BBABCD20A0457D004DBB19 /* ReadServices.swift in Sources */,
 				C36177C72092303C00545C35 /* Constants.swift in Sources */,
@@ -390,6 +404,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SYSTEM_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -440,9 +455,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SYSTEM_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -453,6 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QTQW7QXE9E;
 				INFOPLIST_FILE = NetworkingLayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -471,6 +489,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QTQW7QXE9E;
 				INFOPLIST_FILE = NetworkingLayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

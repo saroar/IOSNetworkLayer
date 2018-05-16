@@ -14,13 +14,20 @@ enum APIRouter: URLRequestConvertible {
     case events
     case event(id: Int)
     case createHevent(
+        id: String?,
         ownerId: String,
         name: String,
-        memberPictureUrls: MemberPictureUrls?,
-        active: Bool,
         share: Bool,
+        active: Bool,
         duration: Int,
-        created: Int
+        created: Int,
+        MemberPicture: MemberPicture?
+    )
+    case person(
+        id: String?,
+        firstName: String,
+        lastName: String,
+        phoneNumbers: [PhoneNumber]?
     )
     
     // MARK: - HTTPMethod
@@ -31,6 +38,8 @@ enum APIRouter: URLRequestConvertible {
         case .events, .event:
             return .get
         case .createHevent:
+            return .post
+        case .person:
             return .post
         }
     }
@@ -46,6 +55,8 @@ enum APIRouter: URLRequestConvertible {
             return "/event/\(id)"
         case .createHevent:
             return "/hangout_channel"
+        case .person:
+            return "/person"
         }
     }
     
@@ -57,25 +68,29 @@ enum APIRouter: URLRequestConvertible {
         case .events, .event:
             return nil
         case .createHevent(
-                           let ownerId,
-                           let name,
-                           let memberPictureUrls,
-                           let duration,
-                           let share,
-                           let active,
-                           let created
-                           ):
-            
+               let id, let ownerId,
+               let name,  let share,
+               let active, let duration,
+               let created, let memberPicture
+        ):
+
             return [
+                K.HeventAPIParameterKey.id: id,
                 K.HeventAPIParameterKey.ownerID: ownerId,
                 K.HeventAPIParameterKey.name: name,
-                K.HeventAPIParameterKey.memberPictureUrls: memberPictureUrls ?? String.empty,
-                K.HeventAPIParameterKey.duration: duration,
-                K.HeventAPIParameterKey.share: share,
                 K.HeventAPIParameterKey.active: active,
-                K.HeventAPIParameterKey.created: created
+                K.HeventAPIParameterKey.share: share,
+                K.HeventAPIParameterKey.duration: duration,
+                K.HeventAPIParameterKey.created: created,
+                K.HeventAPIParameterKey.memberPicture: memberPicture
             ]
-            
+        case .person(let id, let firstName, let lastName, let phoneNumbers):
+            return [
+                K.PersonAPIParameterKey.id: id,
+                K.PersonAPIParameterKey.firstName: firstName,
+                K.PersonAPIParameterKey.lastName: lastName,
+                K.PersonAPIParameterKey.phoneNumbers: phoneNumbers
+            ]
         }
     }
     
@@ -96,6 +111,7 @@ enum APIRouter: URLRequestConvertible {
         if let parameters = parameters {
             do {
                 urlRequest.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
+                debugPrint(urlRequest)
             } catch {
                 throw AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: error))
             }
@@ -104,3 +120,52 @@ enum APIRouter: URLRequestConvertible {
         return urlRequest
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

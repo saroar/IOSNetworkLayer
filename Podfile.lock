@@ -1,19 +1,16 @@
 PODS:
   - Alamofire (5.0.0.beta.1)
   - OAuthSwift (1.2.0)
-  - ReachabilitySwift (4.1.0)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `alamofire5`)
   - OAuthSwift (~> 1.2.0)
-  - ReachabilitySwift
   - SwiftyJSON (~> 3.1.4)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - OAuthSwift
-    - ReachabilitySwift
     - SwiftyJSON
 
 EXTERNAL SOURCES:
@@ -29,9 +26,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 8dc618ab9e6a26d9d77559e4c35e59e56451e69e
   OAuthSwift: 7fd6855b8e4d58eb5a30d156ea9bed7a8aecd1ca
-  ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: b1953432d567dd6eaeb4672e8fe00a9dc821cc36
+PODFILE CHECKSUM: 5b7ce5347f8198492a83a264cd75e9e2ddbdeb2c
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.2

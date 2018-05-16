@@ -8,38 +8,32 @@
 
 import Foundation
 
-struct MemberPictureUrls: Codable {
-    private(set) var memberPictureUrls: [String]?
+struct MemberPicture: Codable {
+    let urls: [String]?
 }
 
 struct Hevent: Codable {
-    private(set) var id: String
-    private(set) var name: String
-    private(set) var memberPictureUrls: MemberPictureUrls?
-    private(set) var share: Bool
-    private(set) var created: Int
-    private(set) var ownerID: String
-    private(set) var active: Bool
-    private(set) var duration: Int
+    let id: String?
+    let ownerID: String
+    let name: String
+    let active: Bool
+    let share: Bool
+    let duration: Int
+    let created: Int
+    let memberPicture: MemberPicture?
     
     typealias JSON = [String: Any]
 }
 
 extension Hevent {
     enum CodingKeys: String, CodingKey {
-        case id = "id"
         case name = "name"
-        case memberPictureUrls = "member_picture_urls"
+        case memberPicture = "member_picture"
+        case id = "id"
         case share = "share"
         case created = "created"
         case ownerID = "owner_id"
         case active = "active"
         case duration = "duration"
-    }
-}
-
-extension MemberPictureUrls {
-    enum CodingKeys: String, CodingKey {
-        case memberPictureUrls = "member_picture_urls"
     }
 }

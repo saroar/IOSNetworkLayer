@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Alamofire
 
 class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad(); printTypeOf(self)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,13 +23,12 @@ class SecondViewController: UIViewController {
     func createHevent() {
 
 //        APIClient.creatHevent(
+//            id: nil,
 //            ownerId: Auth.userid,
 //            name: Auth.name,
-//            memberPictureUrls: nil,
-//            active: true,
-//            share: true,
-//            duration: 240,
-//            created: convertTimeDateToInt()
+//            active: true, share: true,
+//            duration: 240, created: convertTimeDateToInt(),
+//            memberPicture: nil
 //        ) { res in
 //
 //            if res.isSuccess {
@@ -37,9 +38,15 @@ class SecondViewController: UIViewController {
 //            }
 //
 //        }
-        APIClient.create(params: <#T##[String : Any]#>, uri: <#T##String#>) { json in
-            print(json)
+        APIClient.creatPerson(id: nil, firstName: "Saroar>", lastName: "<Khandoker", phoneNumbers: nil) { result in
+            if result.isSuccess {
+                 print("created Hevent", result)
+            } else {
+                print("error create Hevent", result.error?.localizedDescription as Any)
+            }
         }
+        
+        
     }
 
     func convertTimeDateToInt() -> Int {

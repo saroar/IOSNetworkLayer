@@ -10,7 +10,10 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
+
 class APIClient {
+    
+    
     @discardableResult
     private static func performRequest<T:Decodable>(
         route: APIRouter,
@@ -22,6 +25,8 @@ class APIClient {
             .responseJSONDecodable (decoder: decoder){ (response: DataResponse<T>) in
                 completion(response.result)
         }
+        
+    
     }
     
     @discardableResult
@@ -53,6 +58,24 @@ class APIClient {
         
     }
     
+    @discardableResult
+    private static func postReq<T:Encodable>(
+        route: APIRouter,
+        headers: HTTPHeaders,
+        ecoder: JSONEncoder = JSONEncoder(),
+        completion:@escaping (Result<T>)->Void
+        ) -> DataRequest {
+        
+//        return Alamofire.request(route)
+//            .responseJSONDecodable (decoder: ecoder) { (response: DataResponse<T>) in
+//                completion(response.result)
+//        }
+
+        return Alamofire.request(route).responseData(completionHandler: { req in
+            
+        })
+    }
+    
     static func login(username: String, password: String, completion:@escaping (Result<User>)->Void) {
 
         performRequest(
@@ -62,23 +85,41 @@ class APIClient {
     }
     
     static func creatHevent(
+        id: String?,
         ownerId: String,
         name: String,
-        memberPictureUrls: MemberPictureUrls?,
         active: Bool,
         share: Bool,
         duration: Int,
-        created: Int, completion:@escaping (Result<[Hevent]>)->Void) {
+        created: Int,
+        memberPicture: MemberPicture?, completion:@escaping (Result<[Hevent]>)->Void) {
 
         postRequest(
             route: APIRouter.createHevent(
+                id: id,
                 ownerId: ownerId,
                 name: name,
-                memberPictureUrls: memberPictureUrls,
-                active: active,
-                share: share,
-                duration: duration,
-                created: created
+                share: share, active: active,
+                duration: duration, created: created,
+                MemberPicture: memberPicture
+            ),
+            headers: Auth.setHeaders(),
+            completion: completion
+        )
+    }
+    
+    static func creatPerson(
+        id: String?,
+        firstName: String,
+        lastName: String,
+        phoneNumbers: [PhoneNumber]?, completion:@escaping (Result<[Hevent]>)->Void) {
+        
+        postRequest(
+            route: APIRouter.person(
+                id: id,
+                firstName: firstName,
+                lastName: lastName,
+                phoneNumbers: phoneNumbers
             ),
             headers: Auth.setHeaders(),
             completion: completion
@@ -86,9 +127,6 @@ class APIClient {
     }
     
     static func getHevents(completion:@escaping (Result<[Hevent]>)->Void) {
-        
-//        let jsonDecoder = JSONDecoder()
-//        jsonDecoder.dateDecodingStrategy = .formatted(.eventDateFormatter)
         
         getRequest(
             route: APIRouter.events,
