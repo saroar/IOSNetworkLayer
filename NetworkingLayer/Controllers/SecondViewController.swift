@@ -38,11 +38,11 @@ class SecondViewController: UIViewController {
 //            }
 //
 //        }
-        APIClient.creatPerson(id: nil, firstName: "Saroar>", lastName: "<Khandoker", phoneNumbers: nil) { result in
+        APIClient.creatPerson(id: nil, firstName: "Saroar>", lastName: "<Khandoker", phoneNumbers: []) { result in
             if result.isSuccess {
                  print("created Hevent", result)
             } else {
-                print("error create Hevent", result.error?.localizedDescription as Any)
+                print("error create Person", result.error?.localizedDescription as Any)
             }
         }
         

@@ -10,7 +10,7 @@ import Foundation
 
 struct K {
     struct ProductionServer {
-        static let baseURL = "http://localhost:8181/api/v1/"
+        static let baseURL = "http://localhost:8181/api/v1"
     }
     
     struct APIParameterKey {

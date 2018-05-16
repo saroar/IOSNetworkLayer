@@ -112,7 +112,7 @@ class APIClient {
         id: String?,
         firstName: String,
         lastName: String,
-        phoneNumbers: [PhoneNumber]?, completion:@escaping (Result<[Hevent]>)->Void) {
+        phoneNumbers: [PhoneNumber]?, completion:@escaping (Result<[Person]>)->Void) {
         
         postRequest(
             route: APIRouter.person(
