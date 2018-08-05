@@ -10,7 +10,9 @@ import UIKit
 import Alamofire
 
 class SecondViewController: UIViewController {
-
+    
+    let network = SimpleClient(baseURL: URL(string: "http://localhost:8181/api/v1")!)
+    
     override func viewDidLoad() {
         super.viewDidLoad(); printTypeOf(self)
         
@@ -45,6 +47,17 @@ class SecondViewController: UIViewController {
                 print("error create Person", result.error?.localizedDescription as Any)
             }
         }
+        
+        let params = [
+            "id": nil,
+            "firstName": "SASSS",
+            "lastName": "KHHHAA"
+            ] as! [String: String]
+        
+        network.post(Person.self, endpoint: "/person", params: params, body: Person, headers: Auth.setHeaders()) { decode, response, error in
+            print("\(decode) \(response) \(error)")
+        }
+
         
         
     }

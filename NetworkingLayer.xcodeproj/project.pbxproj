@@ -26,6 +26,7 @@
 		C37D83D120AC538800F70B52 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D83D020AC538800F70B52 /* Helpers.swift */; };
 		C37D83D320AC5E6A00F70B52 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D83D220AC5E6A00F70B52 /* Person.swift */; };
 		C37D83D520AC5E8500F70B52 /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D83D420AC5E8500F70B52 /* PhoneNumber.swift */; };
+		C37D83D720AD5E4600F70B52 /* SimpleClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D83D620AD5E4600F70B52 /* SimpleClient.swift */; };
 		C39613F020A6CA45003B9EC5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36177C220922D6F00545C35 /* APIClient.swift */; };
 		C3BBABC5209F7AE2004DBB19 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBABC4209F7AE2004DBB19 /* Auth.swift */; };
 		C3BBABC9209F7B58004DBB19 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBABC8209F7B58004DBB19 /* String.swift */; };
@@ -58,6 +59,7 @@
 		C37D83D020AC538800F70B52 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		C37D83D220AC5E6A00F70B52 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		C37D83D420AC5E8500F70B52 /* PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
+		C37D83D620AD5E4600F70B52 /* SimpleClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleClient.swift; sourceTree = "<group>"; };
 		C3BBABC4209F7AE2004DBB19 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		C3BBABC8209F7B58004DBB19 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		C3BBABCA209F848B004DBB19 /* Services.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Services.plist; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				C36177C220922D6F00545C35 /* APIClient.swift */,
+				C37D83D620AD5E4600F70B52 /* SimpleClient.swift */,
 				C36177C420922E2E00545C35 /* APIRouter.swift */,
 			);
 			path = APIClient;
@@ -322,6 +325,7 @@
 				C3BBABCD20A0457D004DBB19 /* ReadServices.swift in Sources */,
 				C36177C72092303C00545C35 /* Constants.swift in Sources */,
 				C36177CB20923F3D00545C35 /* User.swift in Sources */,
+				C37D83D720AD5E4600F70B52 /* SimpleClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
